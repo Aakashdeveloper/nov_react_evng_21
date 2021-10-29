@@ -3,6 +3,13 @@ https://nodejs.org/en/ > Install
 https://github.com/Aakashdeveloper > Create Account
 https://git-scm.com/downloads > Install
 
+//// extensions
+> TabNine
+> GitLens
+> git history
+> eslint
+> vscode-icons
+
 html
 css
 bootstrap 3,4,5
@@ -56,10 +63,34 @@ json
     }
 ]
 
+================================
+package.json
+> entry point to the application
+> meta data(version, description, author)
+> script (start, test, build)
+> packages we need for app
 
-//// extensions
-> TabNine
-> GitLens
-> git history
-> eslint
-> vscode-icons
+/////////
+Step to generate package.json
+/////////
+*NodeJs must be installed in system
+> navigate inside folder using cmd/terminal
+> npm init
+> answer all questions
+> type "yes"
+
+/////////
+Step to install package
+/////////
+> navigate inside folder using cmd/terminal
+> npm i packagename
+
+/////////
+Step to generate react app
+////////////////////////////////
+> navigate inside folder using cmd/terminal
+> npx create-react-app appname
+
+> go inside app using cmd/terminal
+> npm start
+> localhost:3000
