@@ -94,3 +94,40 @@ Step to generate react app
 > go inside app using cmd/terminal
 > npm start
 > localhost:3000
+
+
+"react": > this is the main lib
+"react-dom": > this help to render the content
+"react-scripts": > this help to run the app
+
+
+//es5
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+3
+
+//es6
+
+const add = (a,b) => {
+    return a+b
+}
+
+
+--------------
+function add(a,b){
+    return b,a
+}
+
+add(1,2)
+2
+
+
+function add(a,b){
+    var out = a,b
+    return out
+}
+add(1,2)
+[1,2]
