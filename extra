@@ -131,3 +131,15 @@ function add(a,b){
 }
 add(1,2)
 [1,2]
+
+
+html> structure
+css> design
+bootstrap> responsive
+
+
+/////////
+inline > start in same line
+> span , a, img
+block > start from new line
+> p, div
