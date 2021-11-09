@@ -1,0 +1,22 @@
+h1{
+    color:teal
+}
+h2{
+    color:#F59C13 
+}
+#para1{
+    color:orangered;
+    text-align: center;
+    font-size:30px
+}
+.imgSize{
+    height:300px;
+    width:100%;
+}
+.prodDiv{
+    height:450px;
+    width:20%;
+    float:left;
+    margin-left:4% 
+}
+

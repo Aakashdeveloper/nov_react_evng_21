@@ -185,5 +185,7 @@ tagName
 > h1 p span
 className
 > when we have target multiple element
+> .
 Id
 > When we have to target unique element
+> #

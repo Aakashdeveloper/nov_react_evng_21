@@ -1,0 +1,37 @@
+body{
+    margin: auto;
+}
+.header{
+    height:70px;
+    width:100%;
+    background-color:#b86e40;
+}
+
+#brand{
+    font-size:30px;
+    color:white;
+    float: left;
+    margin-left: 6%;
+    margin-top: 1%;
+}
+
+#social{
+    float: left;
+    margin-left: 64%;
+    margin-top: 0%;
+}
+.socialImg{
+    height:50px
+}
+.search{
+    height:450px;
+    width:100%;
+    background-image:url('images/foodWallpaper.png');
+    background-repeat:no-repeat;
+    background-size: 100% 450px;
+}
+.quickSearch{
+    height:500px;
+    width:100%;
+    background-color:skyblue;
+}
