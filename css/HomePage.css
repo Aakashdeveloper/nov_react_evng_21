@@ -18,7 +18,7 @@ body{
 #social{
     float: left;
     margin-left: 64%;
-    margin-top: 0%;
+    margin-top: 10px;
 }
 .socialImg{
     height:50px
@@ -30,8 +30,83 @@ body{
     background-repeat:no-repeat;
     background-size: 100% 450px;
 }
+
+#logo{
+    height:150px;
+    width:150px;
+    background-color: white;
+    border-radius:50%;
+    margin-left: 44%;
+    margin-top: 1%;
+    position:absolute;
+
+}
+
+#logo > span{
+    position:absolute;
+    margin-left: 20%;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size:90px;
+    color:red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#heading{
+    color:white;
+    font-size:45px;
+    margin-top:14%;
+    margin-left: 34%;
+    position:absolute;
+}
+
+#dropdown{
+    width:50%;
+    height:60px;
+    margin-top:22%;
+    margin-left: 28%;
+    position:absolute;
+}
+
 .quickSearch{
     height:500px;
-    width:100%;
-    background-color:skyblue;
+    width:80%;
+    margin-left: 10%;
+    margin-top:2%;
+}
+
+select{
+    height:60px;
+    width:40%
+}
+
+#restaurant{
+    width:50%
+}
+
+#QuickSearchHeading{
+    color:#d9713f;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    font-weight: bold;
+    margin-left:1%;
+}
+
+#QuickSubHeading{
+    color:gray;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+    position:absolute;
+    margin-left:1%;
+}
+
+.tileContainer{
+    height:180px;
+    width:32%;
+    background-color:red;
+    margin-left:1%;
+    margin-top:5%;
+    display:inline-block
 }
