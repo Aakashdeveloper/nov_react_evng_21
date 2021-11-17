@@ -3,3 +3,29 @@
     background-color: #6c4fd8 !important;
     border-color: #615353;
 }
+
+.mydiv{
+    height:200px;
+}
+
+#red{
+    background-color: red
+}
+#yellow{
+    background-color: yellow
+}
+#teal{
+    background-color: teal
+}
+#purple{
+    background-color: purple
+}
+#olive{
+    background-color: olive
+}
+#green{
+    background-color: green
+}
+#blue{
+    background-color: rgb(87, 87, 233)
+}
