@@ -206,3 +206,16 @@ md > 768px;
 lg > 992px;
 xl > 1200px
 xxl > 1400px
+
+///////component////////////////////////////////
+ClassComponent
+> Logical Component
+> we can maintain the state
+> we can use for api calling, logics as well as display
+
+FunctionalComponent
+> Dumb Component
+> they are mainly use for display purpose
+> we cannot maintain the state
+
+HooksComponent
