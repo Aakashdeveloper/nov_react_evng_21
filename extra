@@ -219,3 +219,21 @@ FunctionalComponent
 > we cannot maintain the state
 
 HooksComponent
+
+/////////////
+state
+> state act like a local variable
+> scope of the state is with one component
+> any data interaction will happen through state
+> whenever state update component will re-render
+> we can update the value of state (mutable)
+
+props
+> props help to transfer data from one component to another
+> we cannot update value of props (immutable)
+> we can send data between nested components only
+
+/////javascript////
+map
+filter
+indexof
