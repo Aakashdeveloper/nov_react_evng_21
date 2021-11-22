@@ -237,3 +237,18 @@ props
 map
 filter
 indexof
+
+var a = ["delhi","mumbai","bangolare", "pune]
+a.map((data) => {console.log(data)})
+
+a.map((data) => {return `<p>${data}</p>`})
+
+
+parent => child (props)
+child  => parent (props with function)
+
+function add(a,b){   . >>>>parent
+    return a+b
+}
+
+add(1,2) >>>> we call the function and pass the data

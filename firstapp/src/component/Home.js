@@ -9,15 +9,19 @@ class Home extends Component {
         super()
 
         this.state={
-            products:JSON
+            products:JSON,
+            filtered:JSON
         }
+    }
+    filterProduct = (keyword) => {
+        var output = ""
     }
     render(){
         // console.log(this.state.products)
         return(
             <React.Fragment>
-                <Header/>
-                <ProductDisplay prodData={this.state.products}/>
+                <Header userText={(data) => {console.log("data in home",data)}}/>
+                <ProductDisplay prodData={this.state.filtered}/>
                 <Footer year="2022" month="Nov"/>
             </React.Fragment>
         )
