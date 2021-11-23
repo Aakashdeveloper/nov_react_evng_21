@@ -252,3 +252,19 @@ function add(a,b){   . >>>>parent
 }
 
 add(1,2) >>>> we call the function and pass the data
+
+/////////
+filter
+var a = [4,5,3,6,1,8,9,0,3]
+a.filter((data) => { return data>5})
+[6, 8, 9]
+
+indexof
+
+var city = ["Delhi","London","Amsterdam","Pune"]
+city.indexOf('London')
+1
+city.indexOf('Delhi')
+0
+city.indexOf('Helsinki')
+-1
