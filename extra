@@ -268,3 +268,18 @@ city.indexOf('Delhi')
 0
 city.indexOf('Helsinki')
 -1
+
+npm i react-router-dom@5.3.0
+
+params(/)
+> complousry to define
+> we for single value
+
+query(?)
+> no need to define
+> use for multiple value
+
+default props
+> history > redirect
+> location > for query params
+> match > params
