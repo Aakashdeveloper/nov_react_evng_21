@@ -1,14 +1,16 @@
 import React,{Component} from 'react';
 import './Search.css';
 
-const url = "https://zomatoajulypi.herokuapp.com/location"
+const url = "https://zomatoajulypi.herokuapp.com/location";
+const restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?stateId="
 
 class Search extends Component{
     constructor(){
         super()
 
         this.state={
-            location:''
+            location:'',
+            restaurant:''
         }
     }
 
@@ -21,7 +23,30 @@ class Search extends Component{
             })
         }
     }
+
+    renderHotel = (data) => {
+        if(data){
+            return data.map((item) => {
+                return (
+                    <option value={item.restaurant_id} key={item.restaurant_id}>
+                        {item.restaurant_name} | {item.address}
+                    </option>
+                )
+            })
+        }
+    }
+
+    handleCity = (event) => {
+        console.log(event.target.value)
+        const cityId = event.target.value
+        fetch(`${restUrl}${cityId}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({restaurant:data})
+        })
+    }
     render(){
+        console.log(">>>",this.state)
         return(
             <div className="search">
                 <div id="logo">
@@ -31,16 +56,32 @@ class Search extends Component{
                     Search Place Near To You
                 </div>
                 <div id="dropdown">
-                    <select>
+                    <select onChange={this.handleCity}>
                         <option>----SELECT Location----</option>
-
+                        {this.renderCity(this.state.location)}
                     </select>
                     <select id="restaurant">
                         <option>----SELECT Restaurant----</option>
+                        {this.renderHotel(this.state.restaurant)}
                     </select>
                 </div>
             </div>
         )
+    }
+
+    //api calling 
+    componentDidMount(){
+        // we are getting data from api and setting in the state
+        fetch(url,{method:'GET'})
+        // return the promise
+        .then((res) => res.json())
+        // resolve the promise and got data
+        .then((data) => {
+            this.setState({location:data})
+        })
+        .catch((err) =>{
+            console.log(err)
+        })
     }
 }
 

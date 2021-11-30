@@ -1,7 +1,16 @@
 import React,{Component} from 'react';
 import './QuickSearch.css';
+import QuickDisplay from './QucikDisplay';
+const url = "https://zomatoajulypi.herokuapp.com/quicksearch";
 
 class QuickSearch extends Component{
+    constructor(){
+        super()
+
+        this.state={
+            mealType:''
+        }
+    }
     render(){
         return(
             <div className="quickSearch">
@@ -11,21 +20,17 @@ class QuickSearch extends Component{
                 <span id="QuickSubHeading">
                     Find Restaurant By MealType
                 </span>
-                <div className="tileContainer">
-                    <div className="tileComponent1">
-                        <img src="images/nightlife.png" alt="cardImg"/>
-                    </div>
-                    <div className="tileComponent2">
-                        <div className="componentHeading">
-                            <a href="listing.html">Nightlife</a>
-                        </div>
-                        <div className="componentSubHeading">
-                            Best Clubs for Nightlife
-                        </div>
-                    </div>
-                </div>
+                <QuickDisplay mealdata={this.state.mealType}/>
             </div>
         )
+    }
+    // api call 
+    componentDidMount(){
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            this.setState({mealType:data})
+        })
     }
 }
 
