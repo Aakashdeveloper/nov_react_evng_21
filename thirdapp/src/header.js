@@ -1,11 +1,15 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return(
         <div className="header">
             <div id="brand">
                 Developer Funnel
+            </div>
+            <div>
+                <Link to="/">Home</Link>
             </div>
             <div id="social">
                 <a href="https://facebook.com/">
