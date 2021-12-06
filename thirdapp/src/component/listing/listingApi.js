@@ -3,7 +3,7 @@ import './listing.css';
 import axios from 'axios';
 import ListingDisplay from './listingDisplay';
 
-const url = "http://localhost:6700/restaurant?mealtype_id="
+const url = " https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id="
 
 class ListingApi extends Component{
     constructor(props){

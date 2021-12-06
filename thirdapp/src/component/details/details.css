@@ -3,7 +3,7 @@
 }
 
 .tileImage{
-    height: 600px;
+    height: 550px;
     width:48%;
     float: left;
 }
@@ -11,7 +11,7 @@
 
 
 .tileContent{
-    height: 600px;
+    height: 550px;
     width:50%;
     margin-left: 2%;
     float: left;
@@ -35,8 +35,8 @@
     margin-left:2%
 }
 .icons >img{
-    width: 150px;
-    height:150px;
+    width: 120px;
+    height:120px;
 }
 
 #stock{

@@ -1,9 +1,13 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import './details.css'
+import './details.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import MenuDisplay from './menuDisplay';
 
 
-const url = "http://localhost:6700/details"
+const url = "https://zomatoajulypi.herokuapp.com/details";
+const menuUrl= "https://zomatoajulypi.herokuapp.com/menu"
 
 class Details extends Component {
     constructor(props){
@@ -14,6 +18,10 @@ class Details extends Component {
             menuList:'',
             userItem:''
         }
+    }
+
+    addToCart = (data) => {
+        this.setState({userItem:data})
     }
 
     render(){
@@ -42,7 +50,31 @@ class Details extends Component {
                                     <img src="https://i.ibb.co/s56LLF9/homedelivery.png"/>
                                 </div>
                             </div>
+                            <div>
+                                <Tabs>
+                                    <TabList>
+                                        <Tab>Details</Tab>
+                                        <Tab>Contact</Tab>
+                                    </TabList>
+
+                                    <TabPanel>
+                                        <h2> {details.restaurant_name}</h2>
+                                        <p> {details.restaurant_name} is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                       
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <p>{details.address}</p>
+                                        <p>Contact Us:  {details.contact_number}</p>
+                                    </TabPanel>
+                                </Tabs>
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="col-md-12">
+                        <center><h2>Menu</h2></center>
+                        <MenuDisplay menudata={this.state.menuList}
+                        finalOrder={(data) => {this.addToCart(data)}}/>
                     </div>
                 </div>
             </>
@@ -53,7 +85,8 @@ class Details extends Component {
     async componentDidMount(){
         let restId = this.props.match.params.restId;
         let response = await axios.get(`${url}/${restId}`)
-        this.setState({details:response.data[0]})
+        let menudata = await axios.get(`${menuUrl}/${restId}`)
+        this.setState({details:response.data[0],menuList:menudata.data})
     }
 }
 

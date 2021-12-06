@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import './Search.css';
 
-const url = "http://localhost:6700/location";
-const restUrl = "http://localhost:6700/restaurant?stateId="
+const url = "https://zomatoajulypi.herokuapp.com/location";
+const restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?stateId="
 
 class Search extends Component{
     constructor(){
