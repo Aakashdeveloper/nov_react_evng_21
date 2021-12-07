@@ -24,9 +24,14 @@ class Details extends Component {
         this.setState({userItem:data})
     }
 
+    proceed = () => {
+        sessionStorage.setItem('menu', this.state.userItem);
+        this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+    }
+
     render(){
         // let details = this.state.details
-        let {details} = this.state
+        let {details} = this.state;
         return(
             <>
                 <div className="main">
@@ -67,6 +72,8 @@ class Details extends Component {
                                         <p>Contact Us:  {details.contact_number}</p>
                                     </TabPanel>
                                 </Tabs>
+                                <button className="btn btn-danger">Back</button> &nbsp;
+                                <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
                             </div>
                         </div>
                     </div>
@@ -76,6 +83,7 @@ class Details extends Component {
                         <MenuDisplay menudata={this.state.menuList}
                         finalOrder={(data) => {this.addToCart(data)}}/>
                     </div>
+                    
                 </div>
             </>
         )
