@@ -3,6 +3,7 @@ import axios from 'axios';
 import './details.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import {Link} from 'react-router-dom';
 import MenuDisplay from './menuDisplay';
 
 
@@ -16,7 +17,8 @@ class Details extends Component {
         this.state={
             details:'',
             menuList:'',
-            userItem:''
+            userItem:'',
+            mealId:sessionStorage.getItem('mealId')?sessionStorage.getItem('mealId'):1
         }
     }
 
@@ -72,7 +74,7 @@ class Details extends Component {
                                         <p>Contact Us:  {details.contact_number}</p>
                                     </TabPanel>
                                 </Tabs>
-                                <button className="btn btn-danger">Back</button> &nbsp;
+                                <Link to={`/list/${this.state.mealId}`} className="btn btn-danger">Back</Link> &nbsp;
                                 <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
                             </div>
                         </div>

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import './placeOrder.css'
 
 const url = "http://zomatoajulypi.herokuapp.com/menuItem"
-const postOrder = ""
+const postOrder = "http://localhost:6910/orders"
 
 class PlaceOrder extends Component{
     constructor(props){
@@ -16,7 +16,7 @@ class PlaceOrder extends Component{
             email:'aakash@gmail.com',
             cost:0,
             address:'Hno12',
-            details:''
+            menuItem:''
         }
     }
 
@@ -26,6 +26,18 @@ class PlaceOrder extends Component{
 
     handleSubmit = () => {
         console.log(this.state)
+        var obj = this.state;
+        obj.menuItem = sessionStorage.getItem('menu');
+        fetch(postOrder,{
+            method:'POST',
+            headers:{
+                'accept': 'application/json',
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        })
+        .then(this.props.history.push('/viewOrder'))
+
     }
 
     renderItems = (data) => {
@@ -79,7 +91,7 @@ class PlaceOrder extends Component{
                                 </div>
                             </div>
                         </div>
-                        {this.renderItems(this.state.details)}
+                        {this.renderItems(this.state.menuItem)}
                         <div className="row">
                             <div className="col-md-12">
                                 <h2>Total Cost is Rs.{this.state.cost}</h2>
@@ -119,7 +131,7 @@ class PlaceOrder extends Component{
                 totalPrice = totalPrice+parseInt(item.menu_price)
                 return 'ok'
             })
-            this.setState({details:data,cost:totalPrice})
+            this.setState({menuItem:data,cost:totalPrice})
         })
     }
 }
