@@ -19,6 +19,26 @@
       "cost": 291,
       "address": "Hno12",
       "menuItem": "65,64"
+    },
+    {
+      "id": 64041,
+      "hotel_name": "Domino's Pizza",
+      "name": "aakash",
+      "phone": "645657567",
+      "email": "aakash@gmail.com",
+      "cost": 577,
+      "address": "Hno12",
+      "menuItem": "1,2,3"
+    },
+    {
+      "id": 96575,
+      "hotel_name": "New Udupi Grand",
+      "name": "aakash",
+      "phone": "645657567",
+      "email": "aakash@gmail.com",
+      "cost": 150,
+      "address": "Hno12",
+      "menuItem": "70,69,66"
     }
   ]
 }

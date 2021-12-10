@@ -36,7 +36,8 @@ class PlaceOrder extends Component{
             },
             body: JSON.stringify(obj)
         })
-        .then(this.props.history.push('/viewOrder'))
+        //.then(this.props.history.push('/viewOrder'))
+        .then(console.log('order Added'))
 
     }
 
@@ -64,44 +65,47 @@ class PlaceOrder extends Component{
                         </h3>
                     </div>
                     <div className ="panel-body">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <input type="hidden" name="cost" value={this.state.cost}/>
-                                <input type="hidden" name="id" value={this.state.id}/>
-                                <input type="hidden" name="hotel_name" value={this.props.match.params.restName}/>
-                                <div className="col-md-6">
-                                    <label>Name</label>
-                                    <input className="form-control" name="name" value={this.state.name}
-                                    onChange={this.handleChange}/>
-                                </div>
-                                <div className="col-md-6">
-                                    <label>Email Id</label>
-                                    <input className="form-control" name="email" value={this.state.email}
-                                    onChange={this.handleChange}/>
-                                </div>
-                                <div className="col-md-6">
-                                    <label>Phone</label>
-                                    <input className="form-control" name="phone" value={this.state.phone}
-                                    onChange={this.handleChange}/>
-                                </div>
-                                <div className="col-md-6">
-                                    <label>Address</label>
-                                    <input className="form-control" name="address" value={this.state.address}
-                                    onChange={this.handleChange}/>
+                        <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <input type="hidden" name="cost" value={this.state.cost}/>
+                                    <input type="hidden" name="id" value={this.state.id}/>
+                                    <input type="hidden" name="hotel_name" value={this.props.match.params.restName}/>
+                                    <div className="col-md-6">
+                                        <label>Name</label>
+                                        <input className="form-control" name="name" value={this.state.name}
+                                        onChange={this.handleChange}/>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label>Email Id</label>
+                                        <input className="form-control" name="email" value={this.state.email}
+                                        onChange={this.handleChange}/>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label>Phone</label>
+                                        <input className="form-control" name="phone" value={this.state.phone}
+                                        onChange={this.handleChange}/>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <label>Address</label>
+                                        <input className="form-control" name="address" value={this.state.address}
+                                        onChange={this.handleChange}/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {this.renderItems(this.state.menuItem)}
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h2>Total Cost is Rs.{this.state.cost}</h2>
+                            {this.renderItems(this.state.menuItem)}
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <h2>Total Cost is Rs.{this.state.cost}</h2>
+                                </div>
+                                <div className="col-md-12">
+                                    <button className="btn btn-success" onClick={this.handleSubmit}
+                                    type="submit">
+                                        Checkout
+                                    </button>
+                                </div>
                             </div>
-                            <div className="col-md-12">
-                                <button className="btn btn-success" onClick={this.handleSubmit}>
-                                    Checkout
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

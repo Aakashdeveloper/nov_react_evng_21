@@ -18,7 +18,7 @@ const Routing = () => {
                 <Route exact path="/list/:mealId" component={ListingApi}/>
                 <Route exact path="/details/:restId" component={RestDetails}/>
                 <Route exact path="/placeOrder/:restName" component={PlaceOrder}/>
-                <Route exact path="/viewOrder" component={ViewOrder}/>
+                <Route exact path="/viewBooking" component={ViewOrder}/>
                 <Route component={NotFound}/>
             </Switch>
             <Footer/>

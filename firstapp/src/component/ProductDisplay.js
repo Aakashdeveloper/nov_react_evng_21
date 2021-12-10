@@ -3,7 +3,7 @@ import './product.css';
 
 const ProductDisplay = (props) => {
     console.log("in prod",props)
-    const renderProduct = props.prodData.map((data) => {
+    const renderProduct = props.prodData.map((data,index) => {
         return(
             <div key={data.id} className="card">
                 <img src={data.image} alt={data.name}/>
