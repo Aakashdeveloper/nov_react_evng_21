@@ -12,6 +12,9 @@ const BookingDisplay = (props) => {
                         <th>{item.phone}</th>
                         <th>{item.email}</th>
                         <th>Rs. {item.cost}</th>
+                        <th>{item.date}</th>
+                        <th>{item.status}</th>
+                        <th>{item.bank}</th>
                         
                     </tr>
                 )
