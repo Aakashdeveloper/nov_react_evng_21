@@ -35,7 +35,7 @@ function Login(){
             if(data.auth == false){
                 setMessage(data.token)
             }else{
-                sessionStorage.setItem('ltk', data.token)
+                localStorage.setItem('ltk', data.token)
                 navigate("/profile")
             }
         })
