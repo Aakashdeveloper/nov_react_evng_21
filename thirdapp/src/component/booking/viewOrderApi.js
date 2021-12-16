@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import OrderDisplay from './orderDisplay'
+import OrderDisplay from './orderDisplay';
+import Header from '../../header';
 
 const url ="http://localhost:6910/orders"
 
@@ -13,8 +14,19 @@ class ViewOrder extends Component{
         }
     }
     render(){
+        if(!sessionStorage.getItem('userdata')){
+            return(
+                <div>
+                    <Header/>
+                    <h1>Login First To Place Booking</h1>
+                </div>
+            )
+        }
         return(
+            <>
+            <Header/>
            <OrderDisplay bookdata={this.state.orders}/>
+           </>
         )
     }
 
