@@ -56,7 +56,7 @@ class PlaceOrder extends Component{
         }
     }
     render(){
-        if(!sessionStorage.getItem('userdata') || !localStorage.getItem('username')){
+        if(!sessionStorage.getItem('userdata')){
             return(
                 <div>
                     <Header/>

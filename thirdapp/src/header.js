@@ -24,17 +24,16 @@ class Header extends Component {
 
     conditionalRender = () => {
         if(this.state.userdata.name || localStorage.getItem('username') !== null){
-            if(localStorage.getItem('username') !== null){
+            if(localStorage.getItem('username') !== null && localStorage.getItem('username') == undefined){
                 return(
                     <>
-                        
-                            <button className="btn btn-info">
+                        <button className="btn btn-info">
                                 Hi
                                 <img src={localStorage.getItem('imgUrl')} style={{height:50,width:50}}/>
                                 {localStorage.getItem('username')}
-                            </button> &nbsp;
-                            <button className="btn btn-danger" 
-                            onClick={this.handleLogout}>Logout</button>
+                        </button> &nbsp;
+                        <button className="btn btn-danger" 
+                        onClick={this.handleLogout}>Logout</button>
                         
                     </>
                 )

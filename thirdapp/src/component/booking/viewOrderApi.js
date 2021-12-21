@@ -14,7 +14,7 @@ class ViewOrder extends Component{
         }
     }
     render(){
-        if(!sessionStorage.getItem('userdata') || !localStorage.getItem('username')){
+        if(!sessionStorage.getItem('userdata')){
             return(
                 <div>
                     <Header/>
@@ -51,7 +51,7 @@ class ViewOrder extends Component{
                 })
             }
         }
-        axios.get(url).then((res) => {this.setState({orders:res.data})})
+        axios.get(`${url}?email=${sessionStorage.getItem('userdata').split(',')[1]}`).then((res) => {this.setState({orders:res.data})})
     }
 }
 
