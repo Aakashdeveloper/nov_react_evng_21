@@ -14,7 +14,7 @@ class ViewOrder extends Component{
         }
     }
     render(){
-        if(!sessionStorage.getItem('userdata')){
+        if(!sessionStorage.getItem('userdata') || !localStorage.getItem('username')){
             return(
                 <div>
                     <Header/>
