@@ -21,19 +21,18 @@ Mock API
 json-server
 React_hooks -1
 React-JWT(Login Logout)-2
-
 Github
+/////////////
 Deployment
 -> MERN
--> heroku
 -> Aws
+/////////
+-> heroku
 -> Docker
 -> Nginx
-
-
-
-React-GraphQL-1
 HOC
+
+React-GraphQL-1 (https://www.youtube.com/c/DeveloperFunnel/videos)
 Basic React Native=1
 React-Redux =1
 React-Redux =1
