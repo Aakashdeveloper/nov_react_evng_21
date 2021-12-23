@@ -22,16 +22,14 @@ json-server
 React_hooks -1
 React-JWT(Login Logout)-2
 Github
-/////////////
 Deployment
 -> MERN
 -> Aws
-/////////
 -> heroku
 -> Docker
 -> Nginx
 HOC
-
+///////////////
 React-GraphQL-1 (https://www.youtube.com/c/DeveloperFunnel/videos)
 Basic React Native=1
 React-Redux =1
@@ -356,3 +354,7 @@ a.split('&')[1].split('=')[1].split('_')[1]
 
 
 https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+
+
+HOC > High Order Component
+> it will take component as argument and return component
