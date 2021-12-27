@@ -29,9 +29,10 @@ Deployment
 -> Docker
 -> Nginx
 HOC
-///////////////
 React-GraphQL-1 (https://www.youtube.com/c/DeveloperFunnel/videos)
 Basic React Native=1
+///////////////
+
 React-Redux =1
 React-Redux =1
 ///////Walkthrough///////
@@ -358,3 +359,9 @@ https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth
 
 HOC > High Order Component
 > it will take component as argument and return component
+
+npm i graphql-tag react-apollo  apollo-boost apollo-graphql
+
+//// Step to generate react native
+> npx create-react-native-app appname
+https://reactnative.dev/docs/image
