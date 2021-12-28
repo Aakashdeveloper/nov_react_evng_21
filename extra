@@ -32,7 +32,6 @@ HOC
 React-GraphQL-1 (https://www.youtube.com/c/DeveloperFunnel/videos)
 Basic React Native=1
 ///////////////
-
 React-Redux =1
 React-Redux =1
 ///////Walkthrough///////
@@ -365,3 +364,8 @@ npm i graphql-tag react-apollo  apollo-boost apollo-graphql
 //// Step to generate react native
 > npx create-react-native-app appname
 https://reactnative.dev/docs/image
+
+Action> Where api call happen
+Reducer > Where we manage updated state
+Store > where we save updated state
+View > From where we call action
