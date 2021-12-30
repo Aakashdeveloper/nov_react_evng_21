@@ -368,3 +368,5 @@ Action> Where api call happen
 Reducer > Where we manage updated state
 Store > where we save updated state
 View > From where we call action
+
+https://github.com/Aakashdeveloper/react-interview-questions

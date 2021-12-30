@@ -25,6 +25,7 @@ const Routing = () => {
                 <Route component={NotFound}/>
             </Switch>
             <Footer/>
+            
         </BrowserRouter>
     )
 }

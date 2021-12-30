@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test Testing Footer 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-block",
+      "width": "100%",
+    }
+  }
+>
+  <hr />
+  <center>
+    <h3>
+      © Developers Funnel 
+       
+    </h3>
+  </center>
+</div>
+`;
